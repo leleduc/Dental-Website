@@ -1,0 +1,22 @@
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+.about {
+  padding-block-end: 0;
+
+  .about-banner {
+    margin-block-end: 50px;
+  }
+
+  .section-text-1 {
+    margin-block: 25px 15px;
+  }
+
+  .btn {
+    font-size: unset;
+    max-width: max-content;
+    margin-block-start: 30px;
+    padding-inline: 15px;
+  }
+}

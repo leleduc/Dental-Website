@@ -1,0 +1,19 @@
+.cta {
+  background-color: $oxford-blue-1;
+  .cta-banner {
+    margin-block-end: 50px;
+  }
+  .section-subtitle {
+    text-transform: capitalize;
+  }
+
+  .section-title {
+    color: $white;
+    font-size: $fs-3;
+    margin-block-end: 30px;
+  }
+
+  .btn {
+    max-width: max-content;
+  }
+}

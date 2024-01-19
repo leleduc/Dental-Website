@@ -1,0 +1,35 @@
+.service {
+  padding-block-end: 0;
+
+  .service-banner {
+    display: none;
+  }
+
+  .section-title {
+    margin-block-end: 50px;
+  }
+
+  .service-list {
+    display: grid;
+    gap: 15px;
+
+    .service-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      min-height: 100%;
+      border: 1px solid $light-gray;
+      border-radius: $radius-4;
+      padding: 30px;
+
+      .card-icon {
+        width: 50px;
+        flex-shrink: 0;
+      }
+
+      .card-title {
+        margin-block-end: 8px;
+      }
+    }
+  }
+}

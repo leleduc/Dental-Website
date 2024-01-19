@@ -1,0 +1,441 @@
+/**
+ * responsive for larger than 575px screen
+ */
+
+@media (min-width: 575px) {
+  /**
+   * VARIABLE
+   */
+
+  :root {
+    /**
+         * typography
+         */
+
+    --fs-1: 4.2rem;
+    --fs-5: 2.6rem;
+  }
+  /*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/**
+ * responsive for larger than 768px screen
+ */
+
+@media (min-width: 768px) {
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+    /**
+     * typography
+     */
+
+    --fs-2: 4.8rem;
+    --fs-6: 2.2rem;
+  }
+
+  /**
+   * RESET
+   */
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 750px;
+  }
+
+  /**
+   * HERO
+   */
+
+  .hero {
+    overflow: hidden;
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 0.75fr;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .hero-content {
+      margin-block-end: 0;
+      .hero-form {
+        position: relative;
+      }
+
+      .hero-form .email-field {
+        margin-block-end: 0;
+        padding-inline-end: 190px;
+      }
+
+      .hero-form .btn {
+        width: auto;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+
+    .hero-banner {
+      margin-inline-end: -60px;
+    }
+  }
+
+  /**
+   * SERVICE
+   */
+  .service {
+    .service-list {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+    }
+  }
+
+  /**
+   * DOCTOR
+   */
+  .doctor .has-scrollbar .scrollbar-item {
+    min-width: calc(50% - 15px);
+  }
+
+  /**
+   * CTA
+   */
+
+  .cta {
+    padding-block: 0;
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-end;
+      gap: 60px;
+
+      .cta-banner {
+        margin-block-end: 0;
+      }
+
+      .cta-content {
+        padding-block: 60px;
+      }
+    }
+  }
+
+  /**
+   * BLOG
+   */
+
+  .blog .blog-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /**
+   * FOOTER
+   */
+
+  .footer-bottom {
+    padding-block: 30px;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .copyright {
+        margin-block-end: 0;
+      }
+    }
+  }
+
+  /**
+   * BACK TO TOP
+   */
+
+  .back-top-btn {
+    bottom: 70px;
+    right: 50px;
+  }
+}
+
+/**
+ * responsive for larger than 992px screen
+ */
+
+@media (min-width: 992px) {
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+    /**
+     * typography
+     */
+
+    --fs-2: 6rem;
+    --fs-1: 4.6rem;
+    --fs-3: 4.6rem;
+  }
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 980px;
+  }
+
+  /**
+   * HEADER
+   */
+
+  .header-top {
+    display: block;
+    background-color: $oxford-blue-1;
+    color: $white;
+    padding-block: 20px;
+    .container {
+      justify-content: space-between;
+
+      .contact-list {
+        gap: 20px;
+
+        .contact-item {
+          gap: 5px;
+
+          ion-icon {
+            color: $royal-blue-light;
+            --ionicon-stroke-width: 40px;
+          }
+
+          .contact-link {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .social-list {
+        gap: 15px;
+
+        .social-link {
+          font-size: $fs-6;
+          transition: $transition;
+        }
+
+        .social-link:is(:hover, :focus) {
+          color: $royal-blue-light;
+        }
+      }
+    }
+  }
+
+  .header-top :is(.container, .social-list),
+  .contact-list,
+  .contact-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-bottom {
+    top: 58px;
+    padding-block: 20px;
+
+    .navbar,
+    .navbar.active {
+      all: unset;
+      margin-inline-start: auto;
+      .navbar-list {
+        display: flex;
+        align-items: center;
+
+        li:not(:last-child) {
+          border-block-end: none;
+        }
+
+        .navbar-link {
+          color: $oxford-blue-1;
+          font-family: $ff-poppins;
+          text-transform: capitalize;
+          transition: $transition;
+        }
+
+        .navbar-link:is(:hover, :focus) {
+          color: $royal-blue-light;
+        }
+      }
+    }
+
+    .btn {
+      display: block;
+      padding: 15px 20px;
+    }
+    .nav-toggle-btn {
+      display: none;
+    }
+  }
+
+  .header-bottom.active {
+    top: -95px;
+  }
+
+  /**
+   * SERVICE
+   */
+
+  .service .service-list {
+    grid-template-columns: repeat(3, 1fr);
+
+    .service-banner {
+      display: block;
+      grid-column: 2 / 3;
+      grid-row: 1 / 4;
+      align-self: center;
+    }
+  }
+
+  /**
+   * ABOUT
+   */
+
+  .about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+
+    .about-banner {
+      margin-block-end: 0;
+    }
+  }
+
+  /**
+   * DOCTOR
+   */
+  .doctor .has-scrollbar .scrollbar-item {
+    min-width: calc(33.33% - 20px);
+  }
+
+  /**
+   * CTA
+   */
+  .cta .container .cta-content {
+    padding-block: 80px;
+  }
+
+  /**
+   * BLOG
+   */
+  .blog .blog-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container {
+    grid-template-columns: 1fr 0.5fr 0.6fr 0.75fr;
+  }
+}
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+  /**
+   * CUSTOM PROPERTY
+   */
+  :root {
+    /**
+     * typography
+     */
+
+    --fs-2: 8rem;
+    --fs-1: 5.5rem;
+    --fs-3: 4.8rem;
+  }
+
+  /**
+   * REUSED STYLE
+   */
+  .container {
+    max-width: 1180px;
+  }
+
+  /**
+   * HEADER
+   */
+
+  .header-top .container .contact-list {
+    gap: 30px;
+  }
+
+  .header-bottom {
+    .container {
+      gap: 40px;
+
+      .navbar-list {
+        gap: 15px;
+      }
+      .btn {
+        padding: 18px 30px;
+      }
+    }
+  }
+
+  /**
+   * ABOUT
+   */
+  .about .container {
+    grid-template-columns: 0.85fr 1fr;
+    gap: 100px;
+  }
+
+  /**
+   * DOCTOR
+   */
+
+  .doctor {
+    padding-block-end: 180px;
+    .has-scrollbar {
+      padding-block-end: 0;
+      margin-block-end: 0;
+      .scrollbar-item {
+        min-width: calc(25% - 22.5px);
+      }
+    }
+  }
+
+  /**
+   * CTA
+   */
+
+  .cta .container {
+    align-items: center;
+
+    .cta-banner {
+      margin-block-start: -120px;
+    }
+  }
+}

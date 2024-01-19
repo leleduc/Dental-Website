@@ -1,0 +1,87 @@
+.doctor {
+  .section-title {
+    margin-block-end: 50px;
+  }
+
+  .has-scrollbar {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    margin-inline: 15px;
+    padding-block-end: 40px;
+    margin-block-end: -20px;
+    scroll-snap-type: inline mandatory;
+
+    .scrollbar-item {
+      min-width: 100%;
+      scroll-snap-align: start;
+
+      .doctor-card {
+        padding: 30px;
+        border: 1px solid $light-gray;
+        border-radius: $radius-4;
+        text-align: center;
+        min-height: 100%;
+
+        .card-banner {
+          border-radius: $radius-4;
+          overflow: hidden;
+          margin-block-end: 25px;
+        }
+        .card-title {
+          font-size: $fs-4;
+          transition: $transition;
+        }
+        .card-subtitle {
+          color: $royal-blue-light;
+          margin-block: 10px 15px;
+        }
+
+        .card-social-list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          .card-social-link {
+            background-color: $lavender-web;
+            color: $royal-blue-light;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 50%;
+            transition: $transition;
+          }
+
+          .card-social-link:is(:hover, :focus) {
+            background-color: $royal-blue-light;
+            color: $white;
+          }
+        }
+      }
+
+      .doctor-card:is(:hover, :focus-within) {
+        .card-title {
+          color: $royal-blue-light;
+        }
+      }
+    }
+  }
+
+  .has-scrollbar::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .has-scrollbar::-webkit-scrollbar-track {
+    background-color: $light-gray;
+    border-radius: $radius-4;
+  }
+
+  .has-scrollbar::-webkit-scrollbar-thumb {
+    background-color: $royal-blue-light;
+    border-radius: $radius-4;
+  }
+
+  .has-scrollbar::-webkit-scrollbar-button {
+    width: calc(25% - 30px);
+  }
+}
