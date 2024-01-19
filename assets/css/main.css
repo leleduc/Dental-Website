@@ -28,4 +28,159 @@
 */
 /*
 *   Transition
-*//*# sourceMappingURL=main.css.map */
+*/
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {
+  display: block;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+address {
+  font-style: normal;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 47%);
+  font-size: 1.5rem;
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+.container {
+  padding-inline: 25px;
+}
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+.section-subtitle {
+  color: var(--royal-blue-light);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  margin-block-end: 10px;
+}
+
+.h1,
+.h2,
+.h3 {
+  font-family: var(--ff-poppins);
+  line-height: 1.2;
+}
+
+.h1 {
+  color: var(--oxford-blue-1);
+  font-size: var(--fs-2);
+}
+
+.h2,
+.h3 {
+  color: var(--oxford-blue-2);
+}
+
+.h2 {
+  font-size: var(--fs-1);
+}
+
+.h3 {
+  font-size: var(--fs-5);
+}
+
+.btn {
+  background-image: linear-gradient(var(--deg, 90deg), hsl(201, 92%, 47%) 0%, hsl(225, 68%, 53%) 100%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0px 10px 30px hsla(225, 68%, 53%, 0.3);
+}
+
+.btn:is(:hover, :focus) {
+  --deg: -90deg;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card-text,
+.section-text {
+  line-height: 1.7;
+}
+
+.img-holder {
+  aspect-ratio: var(--width)/var(--height);
+  background-color: hsl(0, 0%, 84%);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*-----------------------------------*\
+  #HEDER
+\*-----------------------------------*//*# sourceMappingURL=main.css.map */
